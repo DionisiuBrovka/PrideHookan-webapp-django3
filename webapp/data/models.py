@@ -65,7 +65,7 @@ class Place(models.Model):
 #========================================================================================
 class Session(models.Model):
     session_id = models.AutoField(primary_key=True)
-    profile = models.ForeignKey('Profile', on_delete=models.CASCADE, default='1')
+    # profile = models.ForeignKey('Profile', on_delete=models.CASCADE, default='1')
     place = models.ForeignKey('Place', on_delete=models.CASCADE)
     start_time = models.DateTimeField(auto_created=True, auto_now_add=True)
     end_time = models.DateTimeField(default=now, blank=True)

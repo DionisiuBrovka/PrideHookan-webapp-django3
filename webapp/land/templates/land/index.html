@@ -1,0 +1,11 @@
+{% extends 'root.html' %}
+
+{% block content %}
+
+    <h1>{{ user.username }}</h1>
+    <a href="{% url 'login' %}">Войти в систему</a><br>
+    <a href="{% url 'logout' %}">Выйти из системы</a>
+    <hr>
+    <a href="{% url 'workerindex' %}">В приложение сотрудника</a>
+    <a href="{% url 'adminindex' %}">В приложение администратора</a>
+{% endblock %}
